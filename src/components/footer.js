@@ -1,0 +1,24 @@
+import React from "react";
+
+const styles = {
+  img: {
+    height: "20px", 
+    width: "20px", 
+    margin: "0 10px"
+  },
+  footer: {
+    background: "#050505",
+    color: "#ffffff", 
+  }
+}
+
+const Footer = () => (
+  <footer className="footer fixed-bottom d-flex p-2" style={styles.footer}>
+    <div className="bottom">
+      Click-It-To-Win-It!
+      <img src="../favicon.ico" alt="react" style={styles.img}/>
+    </div>
+  </footer>
+); 
+
+export default Footer; 
