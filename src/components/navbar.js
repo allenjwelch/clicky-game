@@ -18,7 +18,7 @@ const styles = {
 
 const Nav = props => (
   <nav className="navbar navbar-expand-lg sticky-top" style={styles.navbar}>
-    <h1 className="navbar-brand" style={styles.logo} href="#">Click-It-To-Win-It!</h1>
+    <h1 className="navbar-brand" style={styles.logo} href="#"><span>{props.brand}</span></h1>
 
     {/* <div className="guide mx-auto" style={styles.guide}>Click an Image to Begin!</div> */}
     

@@ -19,19 +19,27 @@ function shuffleArray(array) {
   return array;
 }
 
-class App extends Component {
+const correct = ["Nice!", "Good Job!", "Doing Great!"];
+const incorrect = ["Oh no!", "You can do better..", "What was that?"];
 
+class App extends Component {
+  
   state = {
+    brand: "Click-It-To-Win-It!",
     userSelect: '',
     userScore: 0,
     topScore: 0
   }
-
+  
+  
   render() {
     const shuffledCards = shuffleArray(cardData);
+    const randCorrect = correct[Math.floor((Math.random() * (correct.length -1)) + 1)];
+    const randIncorrect = incorrect[Math.floor((Math.random() * (incorrect.length -1)) + 1)];
+    
     return (
       <div className="App">
-        <Nav userScore={this.state.userScore} topScore={this.state.topScore}/>
+        <Nav userScore={this.state.userScore} topScore={this.state.topScore} brand={this.state.brand}/>
         <Header />
         <Main>
           {shuffledCards.map(card =>
@@ -44,16 +52,21 @@ class App extends Component {
                 // JS function for game play and updating user score
                 this.setState((prevState) => {
                   if (this.state.userSelect === prevState.userSelect) {
-                    return ({userScore : 0})
+                    return ({
+                      userScore : 0,
+                      brand: randIncorrect
+                    })
                   } else {
                     if (this.state.topScore <= this.state.userScore) {
                       return ({
                         userScore : this.state.userScore + 1,
-                        topScore : this.state.topScore + 1
+                        topScore : this.state.topScore + 1,
+                        brand: randCorrect
                       })
                     } else if (this.state.topScore >= this.state.userScore) {
                       return ({
                         userScore : this.state.userScore + 1,
+                        brand: randCorrect
                       })
                     }
                   }
