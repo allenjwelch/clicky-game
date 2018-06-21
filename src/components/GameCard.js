@@ -3,13 +3,19 @@ import Radium from 'radium';
 
 const styles = {
   img: {
-    height: "150px",
-    width: "150px",
-    margin: "20px",
-    border: "5px solid #3cbae0",
+    height: "250px",
+    width: "250px",
+    margin: "15px",
+    border: "5px solid #202020",
     padding: "15px",
+    background: "#ECEFF1",
+    borderRadius: "20px",
     ':hover': {
-      boxShadow: "10px 10px 10px #cccccc"
+      boxShadow: "15px 15px 10px #202020"
+      // height: "280px",
+      // width: "280px",
+      // margin: "0px",
+
     },
   }
 }

@@ -1,5 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+  background: #202020;
+  /* background: linear-gradient(140deg, #38a8ca, #a6c0c9)  */
 }
