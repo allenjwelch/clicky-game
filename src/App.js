@@ -52,7 +52,16 @@ class App extends Component {
                     return ({userScore : 0})
                   } else {
                     console.log('userScore: ' + this.state.userScore);
-                    return ({userScore : this.state.userScore + 1})
+                    if (this.state.topScore <= this.state.userScore) {
+                      return ({
+                        userScore : this.state.userScore + 1,
+                        topScore : this.state.topScore + 1
+                      })
+                    } else if (this.state.topScore >= this.state.userScore) {
+                      return ({
+                        userScore : this.state.userScore + 1,
+                      })
+                    }
                   }
                   // return { score: prevState.score + 1 }
                 })
@@ -61,8 +70,8 @@ class App extends Component {
                 // }
 
                 // TODO: Updating Top score
-                this.setState({topScore : this.state.topScore + 1})
-                console.log('topScore: ' + this.state.topScore);
+                // this.setState({topScore : this.state.topScore + 1})
+                // console.log('topScore: ' + this.state.topScore);
 
               }}
             />
