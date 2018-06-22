@@ -2,7 +2,7 @@
 React application where users click image cards to earn points. This project demonstrates the use of React's components and rendering new states to the DOM on each click. 
 
 #### GitHub:  https://github.com/allenjwelch/clicky-game
-#### Deployed: __
+#### Deployed: https://allenjwelch.github.io/clicky-game/
 
 ![title image](/public/clickItTitle.PNG)
 
